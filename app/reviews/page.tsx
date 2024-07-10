@@ -1,6 +1,12 @@
+import getConfig from 'next/config'
 import Image from 'next/image'
+import Link from 'next/link'
 import FiveStarsSVG from '../_components/svgs/FiveStarsSVG'
 import GoogleSVG from '../_components/svgs/GoogleSVG'
+
+const {
+  publicRuntimeConfig: { googleReviewURL },
+} = getConfig()
 
 const Reviews = () => {
   return (
@@ -13,15 +19,18 @@ const Reviews = () => {
           <br />
           and help others learn more about our business. Thank you!
         </p>
-        <div className="cursor-pointer w-[500px] h-[100px] flex p-0.5 bg-[var(--accent-color)] border-2 border-[var(--accent-color)] rounded-xl">
+        <Link
+          href={googleReviewURL}
+          className="flex items-center w-[500px] h-[100px] flex p-0.5 bg-[var(--accent-color)] border-2 border-[var(--accent-color)] rounded-xl"
+        >
           <div className="bg-[var(--foreground-color)] h-full aspect-square flex justify-center items-center rounded-lg">
             <GoogleSVG />
           </div>
-          <div className="flex flex-col items-center justify-center space-y-2 flex-1">
+          <div className="flex flex-col items-center justify-center space-y-1 flex-1">
             <h1 className="text-xl text-[var(--foreground-color)] font-bold">Rate us on Google</h1>
             <FiveStarsSVG />
           </div>
-        </div>
+        </Link>
       </div>
     </main>
   )

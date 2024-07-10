@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  publicRuntimeConfig: {
+    googleReviewURL: 'https://google.com',
+    websiteURL: 'https://huongdathuy.webflow.io',
+  },
+}
 
-export default nextConfig;
+export default nextConfig
