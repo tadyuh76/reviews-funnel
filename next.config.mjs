@@ -4,6 +4,9 @@ const nextConfig = {
     googleReviewURL: 'https://google.com',
     websiteURL: 'https://huongdathuy.webflow.io',
   },
+  serverRuntimeConfig: {
+    businessEmail: 'huongdathuy76@gmail.com',
+  },
 }
 
 export default nextConfig
