@@ -1,9 +1,18 @@
+import getConfig from 'next/config'
+
 interface EmailTemplateProps {
-  firstName: string
+  feedback: FormDataEntryValue | null
 }
 
-export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ firstName }) => (
+const {
+  publicRuntimeConfig: { businessOwnerFirstName, reviewsURL },
+} = getConfig()
+
+export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ feedback }) => (
   <div>
-    <h1>Welcome, {firstName}!</h1>
+    <h1>Hello {businessOwnerFirstName}!</h1>
+    <p>You have a new feedback from {reviewsURL}:</p>
+    <br />
+    {feedback?.toString()}
   </div>
 )
