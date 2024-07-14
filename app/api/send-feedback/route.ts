@@ -10,7 +10,6 @@ export async function POST(req: Request) {
     const businessName = searchParams.get('name')
     const businessEmail = searchParams.get('email')
     const senderEmail = searchParams.get('sender')
-    console.log(businessName)
 
     const formData = await req.formData()
     const feedbackMsg = formData.get('message') ?? ''
