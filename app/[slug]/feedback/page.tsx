@@ -21,7 +21,7 @@ const Feedback = () => {
       const formData = new FormData(event.currentTarget)
 
       const response = await fetch(
-        `/api/send-feedback?name=${businessInfo?.businessName}?&email=${businessInfo?.businessEmail}&sender=${businessInfo?.senderEmail}`,
+        `/api/send-feedback?name=${businessInfo?.businessName}&email=${businessInfo?.businessEmail}&sender=${businessInfo?.senderEmail}`,
         {
           method: 'POST',
           body: formData,
