@@ -1,5 +1,3 @@
-// 'use client'
-
 import { EmailTemplate } from '@/app/_components/EmailTemplate'
 import { Resend } from 'resend'
 
