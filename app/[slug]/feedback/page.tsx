@@ -1,5 +1,6 @@
 'use client'
 
+import ErrorPage from '@/app/_components/ErrorPage'
 import Logo from '@/app/_components/Logo'
 import useStore from '@/app/zustand/business-info'
 import { useRouter } from 'next/navigation'
@@ -19,13 +20,14 @@ const Feedback = () => {
     try {
       const formData = new FormData(event.currentTarget)
 
-      const response = await fetch('/api/send-feedback', {
-        method: 'POST',
-        body: formData,
-      })
+      const response = await fetch(
+        `/api/send-feedback?name=${businessInfo?.businessName}?&email=${businessInfo?.businessEmail}&sender=${businessInfo?.senderEmail}`,
+        {
+          method: 'POST',
+          body: formData,
+        }
+      )
       if (businessInfo) {
-        console.log('navigated')
-
         router.replace('thank-you')
       }
 
@@ -69,7 +71,7 @@ const Feedback = () => {
       </div>
     </main>
   ) : (
-    <p>No Business Found</p>
+    <ErrorPage />
   )
 }
 

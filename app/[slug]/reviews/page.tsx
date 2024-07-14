@@ -1,5 +1,6 @@
 'use client'
 
+import ErrorPage from '@/app/_components/ErrorPage'
 import Logo from '@/app/_components/Logo'
 import useStore from '@/app/zustand/business-info'
 import Link from 'next/link'
@@ -33,7 +34,9 @@ const Reviews = () => {
         </Link>
       </div>
     </main>
-  ) : null
+  ) : (
+    <ErrorPage />
+  )
 }
 
 export default Reviews

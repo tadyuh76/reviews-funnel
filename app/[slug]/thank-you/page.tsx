@@ -1,5 +1,6 @@
 'use client'
 
+import ErrorPage from '@/app/_components/ErrorPage'
 import Logo from '@/app/_components/Logo'
 import useStore from '@/app/zustand/business-info'
 import Button from '../../_components/Button'
@@ -19,7 +20,9 @@ const ThankYou = () => {
         <Button text="Return to Homepage" href={businessInfo.websiteURL} />
       </div>
     </main>
-  ) : null
+  ) : (
+    <ErrorPage />
+  )
 }
 
 export default ThankYou
