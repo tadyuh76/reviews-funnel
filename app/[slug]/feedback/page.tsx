@@ -36,7 +36,6 @@ const Feedback = () => {
       }
     } catch (error) {
       setError('Failed to submit the data. Please try again.')
-      console.error(error)
     } finally {
       setIsLoading(false)
     }

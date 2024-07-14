@@ -1,4 +1,3 @@
-import { EmailTemplate } from '@/app/_components/EmailTemplate'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -11,21 +10,20 @@ export async function POST(req: Request) {
     const businessName = searchParams.get('name')
     const businessEmail = searchParams.get('email')
     const senderEmail = searchParams.get('sender')
+    console.log(businessName)
 
     const formData = await req.formData()
-    const feedbackMsg = formData.get('message')
+    const feedbackMsg = formData.get('message') ?? ''
+    const text = `You have received a new feedback!\n\n${feedbackMsg}`
 
     const { data, error } = await resend.emails.send({
       from: `${businessName} Feedback <${senderEmail}>`,
       to: [businessEmail ?? ''],
-      subject: `[${businessName} Feedback] You have a new feedback on your Reviews Funnel`,
-      text: '',
-      react: EmailTemplate({ text: feedbackMsg?.toString() ?? '' }),
+      subject: '[hreviews.studio] You have received a new feedback!',
+      text: text,
     })
 
     if (error) {
-      console.log(error)
-
       return Response.json({ error }, { status: 500 })
     }
 
