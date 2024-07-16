@@ -1,17 +1,17 @@
 'use client'
 
-import { collection, getDocs, query, QueryDocumentSnapshot, where } from '@firebase/firestore'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import ErrorPage from '../_components/ErrorPage'
 import LoadingPage from '../_components/LoadingPage'
 import Logo from '../_components/Logo'
-import { db } from '../firebaseConfig'
 import useStore from '../zustand/business-info'
 
+import { collection, getDocs, query, QueryDocumentSnapshot, where } from '@firebase/firestore'
 import badEmojiSVG from '../../public/bad.svg'
 import goodEmojiSVG from '../../public/good.svg'
+import { db } from '../firebaseConfig'
 
 export interface IBusinessInfo {
   businessEmail: string
@@ -22,6 +22,7 @@ export interface IBusinessInfo {
   reviewsURL: string
   senderEmail: string
   slug: string
+  webiconURL: string
   websiteURL: string
 }
 
