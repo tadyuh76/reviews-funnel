@@ -12,17 +12,16 @@ const Reviews = () => {
 
   return businessInfo ? (
     <main className="flex justify-center items-center h-screen bg-[url('/background-pattern.png')] bg-repeat">
-      <div className="bg-[var(--foreground-color)] py-10  rounded-2xl flex flex-col items-center w-1/2">
+      <div className="bg-[var(--foreground-color)] py-10 px-4 md:px-10 rounded-2xl flex flex-col items-center justify-center w-full h-full md:h-auto md:w-4/5 lg:w-2/3 xl:w-1/2">
         <Logo />
         <h1 className="text-2xl mb-5">Your review would mean a lot to us!</h1>
         <p className="mb-10 text-[var(--grey)] text-center">
-          Please click the button below to rate us on Google
-          <br />
-          and help others learn more about our business. Thank you!
+          Please click the button below to rate us on Google and help others learn more about our
+          business. Thank you!
         </p>
         <Link
           href={businessInfo.googleReviewURL}
-          className="flex items-center w-[500px] h-[100px] flex p-0.5 bg-[var(--accent-color)] border-2 border-[var(--accent-color)] rounded-xl"
+          className="flex items-center w-full max-w-[500px] h-[100px] flex p-0.5 bg-[var(--accent-color)] border-2 border-[var(--accent-color)] rounded-xl"
         >
           <div className="bg-[var(--foreground-color)] h-full aspect-square flex justify-center items-center rounded-lg">
             <GoogleSVG />

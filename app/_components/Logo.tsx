@@ -10,10 +10,11 @@ const Logo = () => {
     <Image
       src={businessInfo.logoURL}
       loader={prop => businessInfo.logoURL}
-      width={200}
-      height={45}
+      fill={false}
       alt="logo"
-      className="mb-10"
+      width={0}
+      height={0}
+      className="mb-10 w-auto h-10"
     />
   ) : null
 }
