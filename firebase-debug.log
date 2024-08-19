@@ -1,0 +1,59 @@
+[debug] [2024-07-13T14:45:48.128Z] ----------------------------------------------------------------------
+[debug] [2024-07-13T14:45:48.131Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-07-13T14:45:48.134Z] CLI Version:   13.13.2
+[debug] [2024-07-13T14:45:48.135Z] Platform:      win32
+[debug] [2024-07-13T14:45:48.135Z] Node Version:  v20.15.1
+[debug] [2024-07-13T14:45:48.136Z] Time:          Sat Jul 13 2024 21:45:48 GMT+0700 (Indochina Time)
+[debug] [2024-07-13T14:45:48.136Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-13T14:45:48.256Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-13T14:45:48.257Z] > authorizing via signed-in user (huongdathuy76@gmail.com)
+[debug] [2024-07-13T14:45:48.257Z] [iam] checking project reviews-funnel for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-13T14:45:48.260Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/reviews-funnel:testIamPermissions [none]
+[debug] [2024-07-13T14:45:48.260Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/reviews-funnel:testIamPermissions x-goog-quota-user=projects/reviews-funnel
+[debug] [2024-07-13T14:45:48.260Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reviews-funnel:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-13T14:45:49.585Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/reviews-funnel:testIamPermissions 200
+[debug] [2024-07-13T14:45:49.587Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reviews-funnel:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-13T14:45:49.593Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reviews-funnel [none]
+[debug] [2024-07-13T14:45:50.174Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reviews-funnel 200
+[debug] [2024-07-13T14:45:50.174Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reviews-funnel {"projectId":"reviews-funnel","projectNumber":"535071936213","displayName":"reviews-funnel","name":"projects/reviews-funnel","resources":{"hostingSite":"reviews-funnel"},"state":"ACTIVE","etag":"1_03bdfcd9-eb7a-42fc-9fcb-bce6c4a85914"}
+[debug] [2024-07-13T14:45:53.318Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/reviews-funnel/sites pageToken=&pageSize=10
+[debug] [2024-07-13T14:45:54.024Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/reviews-funnel/sites 200
+[debug] [2024-07-13T14:45:54.024Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/reviews-funnel/sites {"sites":[{"name":"projects/reviews-funnel/sites/reviews-funnel","defaultUrl":"https://reviews-funnel.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-07-13T14:45:54.025Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/reviews-funnel/sites 
+[debug] [2024-07-13T14:45:54.477Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/reviews-funnel/sites 200
+[debug] [2024-07-13T14:45:54.477Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/reviews-funnel/sites {"sites":[{"name":"projects/reviews-funnel/sites/reviews-funnel","defaultUrl":"https://reviews-funnel.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-07-13T14:45:54.477Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reviews-funnel/webApps/-/config [none]
+[debug] [2024-07-13T14:45:55.295Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reviews-funnel/webApps/-/config 200
+[debug] [2024-07-13T14:45:55.295Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reviews-funnel/webApps/-/config {"projectId":"reviews-funnel","appId":"1:535071936213:web:332a8cfb060da1e9791c5c","storageBucket":"reviews-funnel.appspot.com","apiKey":"AIzaSyC9vvVAdlGNV9b5epQJx1JXB0d7zyB7roM","authDomain":"reviews-funnel.firebaseapp.com","messagingSenderId":"535071936213"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-07-13T14:46:03.726Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/reviews-funnel/sites/reviews-funnel [none]
+[debug] [2024-07-13T14:46:04.354Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/reviews-funnel/sites/reviews-funnel 200
+[debug] [2024-07-13T14:46:04.354Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/reviews-funnel/sites/reviews-funnel {"name":"projects/reviews-funnel/sites/reviews-funnel","defaultUrl":"https://reviews-funnel.web.app","type":"DEFAULT_SITE"}
+[info]   ▲ Next.js 14.2.4
+
+[info]   - Environments: .env
+
+
+[info]    Creating an optimized production build ...
+
+[info] uncaughtException [Error: EPERM: operation not permitted, open 'C:\Users\Admin\Data\Coding Projects\reviews-funnel\.next\trace'] {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'open',
+  path: 'C:\\Users\\Admin\\Data\\Coding Projects\\reviews-funnel\\.next\\trace'
+}
+
+[debug] [2024-07-13T14:46:23.175Z] Error: ENOENT: no such file or directory, open 'C:\Users\Admin\Data\Coding Projects\reviews-funnel\.next\server\middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.
